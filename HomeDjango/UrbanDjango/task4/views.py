@@ -3,23 +3,25 @@ from django.template.response import TemplateResponse
 from django.views.generic import TemplateView
 # Create your views here.
 
+class menu(TemplateView):
+    template_name = 'fourth_task/menu.html'
 
 class cart_temp(TemplateView):
-    template_name = 'third_task/cart.html'
+    template_name = 'fourth_task/cart.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['cart_title'] = 'Корзина'
         return context
 
 class games_temp(TemplateView):
-    template_name = 'third_task/games.html'
+    template_name = 'fourth_task/games.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['games_title'] = 'Игры'
         return context
 
 class platform_temp(TemplateView):
-    template_name = 'third_task/platform.html'
+    template_name = 'fourth_task/platform.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['main_title'] = 'Главная страница'
