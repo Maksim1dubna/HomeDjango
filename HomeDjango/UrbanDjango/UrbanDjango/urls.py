@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from task2.views import class_temp, func_temp
 from task4.views import cart_temp, games_temp, platform_temp, menu
+from task5.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +27,7 @@ urlpatterns = [
     path('platform/', platform_temp.as_view()),
     path('platform/games/', games_temp.as_view()),
     path('platform/cart/', cart_temp.as_view()),
-    path('', menu.as_view(template_name="fourth_task/menu.html"))
+    path('', menu.as_view(template_name="fourth_task/menu.html")),
+    # path('registration/', sign_up_by_html),
+    path('registration/', sign_up_by_django),
 ]
