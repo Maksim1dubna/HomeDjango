@@ -1,4 +1,17 @@
-{% extends "fourth_task/platform.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ main_title }}</title>
+</head>
+<body>
+{% block pagename %}
+<h1>{{ main_title }}</h1>
+{% endblock pagename %}
+{% block menu %}
+<a href="/platform/?">{{ main }}</a><br>
+<a href="/platform/games">{{ shop }}</a><br>
+<a href="/platform/cart">{{ cart }}</a><br>
+{% endblock menu %}
 {% block content %}
-<h1>2</h1>
 {% endblock content %}
+</body>

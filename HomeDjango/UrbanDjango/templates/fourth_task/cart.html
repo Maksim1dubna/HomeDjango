@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+{% extends 'fourth_task/menu.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ cart_title }}</title>
+    <title>{{ main_title }}</title>
 </head>
 <body>
-<h1>{{ cart_title }}</h1>
-<form action="/platform" method="get">
-   <button type="submit">Вернуться обратно</button>
+{% block content %}
+<h2>Извините, корзина пуста</h2>
+{% endblock content %}
 </form>
 </body>
 </html>
